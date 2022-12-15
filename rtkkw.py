@@ -10,6 +10,8 @@ from aqt.utils import showInfo
 from anki.utils import stripHTML
 import re 
 
+# If you just want to change any field names, follow the instructions in the Add-On config inside Anki, here is NOT the place to do it
+# If you want to change the formatting, most of it can be simply done through CSS using the kw (for paragraphs), keyword, kw-separator and kw-vocab classes from your card template.
 
 CONFIG = mw.addonManager.getConfig(__name__)
 
@@ -23,8 +25,8 @@ vocabField = CONFIG['vocabField']
 vocabUrl= CONFIG['vocabUrl']
 kanjiUrl = CONFIG['kanjiUrl']
 rtkDeck = CONFIG['rtkDeck']
+separator = CONFIG['separator']
 OVERRIDE = CONFIG['override'] 
-
 
 def getMessage(note):
     kanji = note[rtkKanjiField]
@@ -35,7 +37,7 @@ def getMessage(note):
         furikw = ''
         if keyword:
             furikw = f'[{keyword}]'
-        message = f"<a class='keyword' href='{vocabUrl}{search_string}'>{kanji}{furikw}  - </a><a class='keyword-vocab' href='{vocabUrl}{search_string}'> {note[vocabField]}</a><br>"
+        message = f"<p class='kw'><a class='keyword' href='{kanjiUrl}{kanji}'>{kanji}{furikw}</a><span class='kw-separator'>{separator}</span><a class='keyword-vocab' href='{vocabUrl}{search_string}'> {note[vocabField]}</a></p>"
     return message, kanji
 
 def generateCache(cache):
