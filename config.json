@@ -1,0 +1,14 @@
+{
+    "source": ["Vocab","Reading"],
+    "destination": "Keywords",
+    "rtkModel": "Japanese Writing",
+    "rtkKanjiField": "Kanji",
+    "rtkKeywordField": "Heisig Keyword",
+    "rtkKeywordDict": "KANJIDIC",
+    "vocabField": "KanjiVocabAnswer",
+    "vocabUrl": "https://jisho.org/search/",
+    "kanjiUrl": "https://jisho.org/search/",
+    "rtkDeck": "余分::漢字::KanjiScribbles",
+    "override": true,
+    "generateKanjiCards": true
+}
