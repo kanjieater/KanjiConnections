@@ -7,7 +7,7 @@
     "rtkKeywordDict": "KANJIDIC",
     "vocabField": "KanjiVocabAnswer",
     "vocabUrl": "https://jisho.org/search/",
-    "kanjiUrl": "http://kanji.koohii.com/study/kanji/",
+    "kanjiUrl": "https://kanji.koohii.com/study/kanji/",
     "rtkDeck": "余分::漢字::ハイジグッズ",
     "override": true,
     "separator": " ・ ",
