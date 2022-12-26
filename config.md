@@ -33,7 +33,7 @@ If you have a `"Vocab"` field with 其の and an `"Expression"` field with そ�
 
 **"vocabField":**  This the field where the KanjiVocab add-on has already generated Vocab to, **This field must be added to your RTK Deck even if you're not using KanjiVocab.**
 
-**"vocabUrl":**  If you used KanjiVocab, this is where all the vocab words in your Destination field will link to (in a single link). Eg. If the Vocab is x漢字 and 練習 it will link to "https://jisho.org/search/漢字%20練習", the vocab is always appended at the end of the link. By the default, it links to the Kanji [keyword] first, and then to the Vocab. Keyword and Vocab may have their own dictionary link.
+**"vocabUrl":**  If you used KanjiVocab, this is where all the vocab words in your Destination field will link to (in a single link). Eg. If the Vocab is x漢字 and 練習 it will link to "[https://jisho.org/search/漢字%20練習](https://jisho.org/search/漢字%20練習)", the vocab is always appended at the end of the link. By the default, it links to the Kanji [keyword] first, and then to the Vocab. Keyword and Vocab may have their own dictionary link.
 
 **"rtkKeywordDict":**  Not currently implemented, do ignore this field.
 
