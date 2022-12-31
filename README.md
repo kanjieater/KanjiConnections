@@ -32,9 +32,13 @@ This is how this addon will display the keywords on its own.
 ### Both Keywords and Vocab (on a light theme for a change)
 
 
+![Keyword+Vocab](https://user-images.githubusercontent.com/32607317/210154549-03934db1-c487-428d-8e7c-97ef0e9ba851.png)
+
+This is how it would look like if KanjiVocab addon is also enabled with KanjiEater's styles (RTK keyword field & furigana shows on hover).
+
 ![Keyword+Vocab](Examples/UpdatedExample.png)
 
-This is how it would look like if KanjiVocab addon is also enabled (furigana is optional).
+This is how it would look like if KanjiVocab addon is also enabled with Ny's Styles (furigana is optional).
 
 ------------------------
 
@@ -244,7 +248,58 @@ Keywords use the `"keyword"` class, and Vocab uses the `"keyword-vocab"` class, 
 
 The separator uses the `"kw-separator"` class, in case you're also interested in changing the appearance for that.
 
-For reference, this is the CSS for the example above:
+There are two examples below of CSS to add to your card. Use only one set of CSS exmples (not both).
+
+For reference this is the CSS for KanjiEater's example above:
+```
+/* KanjiVocab*/
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.kv_kanji_known, .kv_kana_known {
+  border: 3px solid #b6d7a2 ;
+  border-radius: 3px;
+}
+
+.kv_kanji_mature, .kv_kana_mature {
+  border: 3px solid #569056;
+  border-radius: 3px;
+}
+
+a.keyword rt {
+    display: none;
+}
+
+
+
+#keyword a {
+  line-height: 150%;
+  font-size: .5em;
+  font-size: 30px;
+  text-align: left !important;
+}
+
+#keyword ruby rt { 
+  visibility: hidden; 
+  font-size: 12px;
+} 
+#keyword ruby:hover rt { visibility: visible; }
+a.keyword ruby:hover rt{
+    display: block;
+}
+#keyword {
+ margin: 0 0 0 20%;
+  text-align: left !important;
+}
+
+.hidden-furigana .kana-ruby{
+visibility: hidden;
+}
+```
+
+For reference, this is the CSS for Ny's example above:
 
 ```
 /* KeywordVocab stuff */
