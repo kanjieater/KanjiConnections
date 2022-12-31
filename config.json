@@ -1,14 +1,15 @@
 {
-    "source": ["Vocab","Reading"],
+    "source": ["Vocab","Expression"],
     "destination": "Keywords",
-    "rtkModel": "Japanese Writing",
+    "rtkModel": "Japanese Heisigs RTK all-in-one",
     "rtkKanjiField": "Kanji",
     "rtkKeywordField": "Heisig Keyword",
     "rtkKeywordDict": "KANJIDIC",
     "vocabField": "KanjiVocabAnswer",
     "vocabUrl": "https://jisho.org/search/",
-    "kanjiUrl": "https://jisho.org/search/",
-    "rtkDeck": "余分::漢字::KanjiScribbles",
+    "kanjiUrl": "https://kanji.koohii.com/study/kanji/",
+    "rtkDeck": "余分::漢字::ハイジグッズ",
     "override": true,
+    "separator": " ・ ",
     "generateKanjiCards": true
 }

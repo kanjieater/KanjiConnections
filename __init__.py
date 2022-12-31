@@ -22,7 +22,7 @@ def setupMenu(browser):
     a.triggered.connect(lambda: start(browser))
     browser.form.menuEdit.addSeparator()
     browser.form.menuEdit.addAction(a)
-
+    browser.form.menuEdit.addSeparator()
 # addHook('editFocusLost', onFocusLost) #sometimes it adds EEEEEEEEVerything
 addHook("browser.setupMenus", setupMenu)
 
