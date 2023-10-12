@@ -58,7 +58,7 @@ To paste the code, go to Anki's main window > Tools (Menu) > Add-ons > Browse & 
 
 - **Supported Anki versions:**  2.1.0~2.1.49 (further versions not tested)
 
-This Add-on also requires the [Japanese Support](https://ankiweb.net/shared/info/3918629684) [`3918629684`] Add-on to get the keywords from your sentences, so not skip this step!
+This Add-on also requires the [Japanese Support](https://ankiweb.net/shared/info/3918629684) [`3918629684`] Add-on to get the keywords from your sentences, so do not skip this step!
 
 ------------------------
 
