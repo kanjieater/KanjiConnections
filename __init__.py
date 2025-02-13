@@ -8,7 +8,7 @@
 #
 from . import rtkkw
 from anki.hooks import addHook
-from PyQt5.QtWidgets import QAction
+from PyQt6.QtGui import QAction
 
 def start(browser):
     from importlib import reload
