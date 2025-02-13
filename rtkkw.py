@@ -1,7 +1,7 @@
 ﻿
-from PyQt5.QtCore import *
-from PyQt5.QtGui import *
-from PyQt5.QtWidgets import QAction
+from PyQt6.QtCore import *
+from PyQt6.QtGui import *
+from PyQt6.QtGui import QAction
 
 from aqt import mw
 from anki.decks import DeckManager
