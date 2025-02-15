@@ -20,14 +20,9 @@
 
 Introduction
 ========================
-This Anki add-on can generate RTK (Remembering the Kanji) or Rebooting the Kanji Keywords to your flashcards.
+This Anki add-on helps you recognize at a glance what other words/relations you have that contain the same kanji on other cards.
 When combined with the KanjiVocab addon it can also generate related Vocab. You can have both together or only the keywords.
 
-
-### RTK Only
-![RTK Keywords](Examples/RTKimage.png)
-
-This is how this addon will display the keywords on its own.
 
 ### Both Keywords and Vocab (on a light theme for a change)
 
@@ -40,10 +35,17 @@ This is how it would look like if KanjiVocab addon is also enabled with KanjiEat
 
 This is how it would look like if KanjiVocab addon is also enabled with Ny's Styles (furigana is optional).
 
+### RTK Only
+![RTK Keywords](Examples/RTKimage.png)
+
+This is how this addon will display the keywords on its own.
+
 ------------------------
 
 What's new in this version
 ========================
+**2025-02-15**
+- Updated to support QT6 versions of Anki
 **2022-12-15**
 - User configuration is now done from inside the Anki add-on config menu (no more messing with files).
 - Added ability to create a new card in the source deck when a kanji from the expression field of the review deck isn't found.
