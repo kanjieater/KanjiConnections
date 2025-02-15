@@ -18,7 +18,7 @@ def start(browser):
 
 def setupMenu(browser):
 
-    a = QAction("Bulk-add RTK Keywords", browser)
+    a = QAction("Bulk-add Kanji Connections", browser)
     a.triggered.connect(lambda: start(browser))
     browser.form.menuEdit.addSeparator()
     browser.form.menuEdit.addAction(a)

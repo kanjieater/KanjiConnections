@@ -15,12 +15,12 @@
     - [Styling Kanji Connections](#Styling-Kanji-Connections)
 - [Troubleshooting](#Troubleshooting)
 - [Support](#Support)
- 
+
 
 
 Introduction
 ========================
-This Anki add-on can generate RTK (Remembering the Kanji) or Rebooting the Kanji Keywords to your flashcards.  
+This Anki add-on can generate RTK (Remembering the Kanji) or Rebooting the Kanji Keywords to your flashcards.
 When combined with the KanjiVocab addon it can also generate related Vocab. You can have both together or only the keywords.
 
 
@@ -44,8 +44,8 @@ This is how it would look like if KanjiVocab addon is also enabled with Ny's Sty
 
 What's new in this version
 ========================
-**2022-12-15**  
-- User configuration is now done from inside the Anki add-on config menu (no more messing with files). 
+**2022-12-15**
+- User configuration is now done from inside the Anki add-on config menu (no more messing with files).
 - Added ability to create a new card in the source deck when a kanji from the expression field of the review deck isn't found.
 - Minor visual changes
 
@@ -53,7 +53,7 @@ What's new in this version
 
 Add-on Installation
 ========================
-Install the add-on via [AnkiWeb](https://ankiweb.net/shared/info/1855482626) or alternatively by using this code: [`1855482626`].  
+Install the add-on via [AnkiWeb](https://ankiweb.net/shared/info/1855482626) or alternatively by using this code: [`1855482626`].
 To paste the code, go to Anki's main window > Tools (Menu) > Add-ons > Browse & Install.
 
 - **Supported Anki versions:**  2.1.0~2.1.49 (further versions not tested)
@@ -73,8 +73,8 @@ Again, make sure [Japanese Support](https://ankiweb.net/shared/info/3918629684) 
 
 Initial preparation
 ------------------------
-For this Add-on to work, it needs **TWO** decks.  
-For simplicity, let's call them the Review Deck (the one with sentences, and where you'll want to add keywords and vocab to) and the RTK Deck (this one will be the source/reference for your RTK Keywords, and also where the vocab will initially go if you're using KanjiVocab). 
+For this Add-on to work, it needs **TWO** decks.
+For simplicity, let's call them the Review Deck (the one with sentences, and where you'll want to add keywords and vocab to) and the RTK Deck (this one will be the source/reference for your RTK Keywords, and also where the vocab will initially go if you're using KanjiVocab).
 
 ![Review Deck](Examples/ReviewDeck.png)
 ![RTK Deck](Examples/RTKDeck.png)
@@ -86,7 +86,7 @@ In this image my review deck is called Japanese and my RTK source deck would be 
 ### The easiest approach to have what you need to get started is to download the [Japanese Heisigs RTK all-in-one](https://ankiweb.net/shared/info/1532278975) deck from Ankiweb.
 ----
 
- - On your **RTK Deck** (even if you downloaded it from the web and don't plan on adding Vocab), you also need to create the field: `KanjiVocabAnswer`.  
+ - On your **RTK Deck** (even if you downloaded it from the web and don't plan on adding Vocab), you also need to create the field: `KanjiVocabAnswer`.
 THIS STEP IS VERY IMPORTANT. If you skip these you'll most likely be getting a "Failed to generate cache, does your model exist?" that will make your browser inoperable, and Anki will probably crash.
 
 - By default, your **Review deck** must have at least a `Keywords` and a `Expression` field (these can be customized from the config button on the anki add-on menu).
@@ -102,19 +102,19 @@ The **Keywords** is the field where this add-on will write the keywords to, and 
 From Anki's main window go to `Tools (Menu) > Add-ons`, find `KanjiEaters Kanji Connections - Related Vocab on Sentence Cards - Heisig RTK` on the list, and either double click it, or click it and then go to the **Config** button located to the right in that window.
 This will open the configuration screen.
 
-Carefully follow the instructions written on the right side of the configuration screen that popped up so it matches your decks. 
+Carefully follow the instructions written on the right side of the configuration screen that popped up so it matches your decks.
 
 An explanation of each of those settings and values can also be independently seen on the [config.md](config.md) file on github.
 
 ### Some visuals
 If you're not using the recommended **RTK source** deck, this is how the Kanji and Heisig Keyword fields look on the default deck:
-![RTKFields Example](Examples/RTKFields1.png)  
+![RTKFields Example](Examples/RTKFields1.png)
 
-The **Kanji** field on your RTK deck should have a SINGLE Kanji. 
+The **Kanji** field on your RTK deck should have a SINGLE Kanji.
 And the **Heisig Keyword** is the field for the English keyword for that kanji.
 
 
-![ReviewDeckFields](Examples/UpdatedReviewDeckField.png)  
+![ReviewDeckFields](Examples/UpdatedReviewDeckField.png)
 An example of how an Expression and Keywords fields might look on your Review Deck after you finish this guide.
 
 
@@ -131,30 +131,30 @@ To include the Vocab, you'll need to *also* install a separate addon called [Kan
 	- `KanjiVocabAnswer` (This is the one that goes on the back of the card)
 	- `KanjiVocabExtra` (Also goes on the back of the card, for words with more than one likely answer)
 
-2. From the Anki main window, go to Tools (Menu) > KanjiVocab..  
+2. From the Anki main window, go to Tools (Menu) > KanjiVocab..
 	- On "**Note type**", select your RTK Deck
  	- On "**Kanji field**", select the Kanji field (it must be a field that only has ONE kanji - used to decide which words to add to the card)
 	- On "**Questions**", insert the number of the vocab words you'd like to display on your cards
-	
-	Some other setting explanations from the developer:  
+
+	Some other setting explanations from the developer:
 	* "Dictionary words" allows words to be taken from the dictionary by frequency (based on JMdict priority tags), even if they did not appear in any scans.
 	* "Allow ambiguous questions" lets you choose whether to allow questions with more than one likely answer. Even if not, they can still appear as "extra".
 	* The "Fields to update" section shows whether the listed fields have been added correctly.
-	
-![Kanji Vocab Cards to Update](Examples/KanjiVocab1.png)  
-	
-3. In the "Cards to scan" tab, you can select multiple decks to scan for vocabulary  
-	Here are some notes from the developer:  
-	* "Note type" is the note type you wish to scan. A note type can appear more than once with different options.  
-	* "Scan type" can be "vocab" or "text". A vocab scan considers the expression and reading as-is (the reading is optional). A text scan splits the expression with MeCab (and does not use a reading).  
-	* The other drop-downs let you select the expression and reading fields for each scan.  
-	* The checkboxes let you choose whether each scan will consider new and suspended cards. Words from such cards will be prioritised above dictionary words, but not counted as "known".  
-	
-![Kanji Vocab Cards to Scan](Examples/KanjiVocab2.png)  
+
+![Kanji Vocab Cards to Update](Examples/KanjiVocab1.png)
+
+3. In the "Cards to scan" tab, you can select multiple decks to scan for vocabulary
+	Here are some notes from the developer:
+	* "Note type" is the note type you wish to scan. A note type can appear more than once with different options.
+	* "Scan type" can be "vocab" or "text". A vocab scan considers the expression and reading as-is (the reading is optional). A text scan splits the expression with MeCab (and does not use a reading).
+	* The other drop-downs let you select the expression and reading fields for each scan.
+	* The checkboxes let you choose whether each scan will consider new and suspended cards. Words from such cards will be prioritised above dictionary words, but not counted as "known".
+
+![Kanji Vocab Cards to Scan](Examples/KanjiVocab2.png)
 I added some sentence decks I had that had sentences in it. For ease of setup I didn't bother adding the Reading fields since some decks had inconsistent ones, and just let MeCab parse it instead.
 - *If* you experience errors with this option, you may need to install [MecabUnidic](https://ankiweb.net/shared/info/13462835) [`13462835`]. I can't confirm if it makes a difference since I already had it installed and KanjiVocab already includes dictionary files derived from JMdict.
 
-4. Save your settings and hit Run, your fields should now be populated  
+4. Save your settings and hit Run, your fields should now be populated
 
 ![RTK Fields2](Examples/RTKFields2.png)
 
@@ -165,7 +165,7 @@ Final Steps
 If you did all the above steps, hooray! Now you can simply:
 1. Go to the browser
 2. Select the cards you'd like to add Keywords to
-3. Go to Edit (Menu) > Bulk-Add RTK Keywords
+3. Go to Edit (Menu) > Bulk-Add Kanji Connections
 4. Don't forget to actually add the `{{Keywords}}` text to your card template so it shows up on the card text! For furgigana display you can use {{furigana:Keywords}}.
 5. Style the keywords according to your visual preferences (more on that below)
 6. Enjoy!
@@ -281,10 +281,10 @@ a.keyword rt {
   text-align: left !important;
 }
 
-#keyword ruby rt { 
-  visibility: hidden; 
+#keyword ruby rt {
+  visibility: hidden;
   font-size: 12px;
-} 
+}
 #keyword ruby:hover rt { visibility: visible; }
 a.keyword ruby:hover rt{
     display: block;
@@ -385,7 +385,7 @@ Traceback (most recent call last):
 KeyError: 'Expression'
 ```
 
-Something like this probably means you changed something on the rtkkw.py directly, please revert it to the original.  
+Something like this probably means you changed something on the rtkkw.py directly, please revert it to the original.
 **All configuration changes should be done from inside Anki using the config button on the Add-on menu.**
 
 "Failed to generate cache, does your model exist?" error
