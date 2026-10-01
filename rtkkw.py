@@ -160,6 +160,8 @@ def regenerateKeywords(nids):
             #     # no dst field
             #     continue
 
+            if srcField not in note:
+                continue
             srcTxt = mw.col.media.strip(note[srcField])
             if not srcTxt.strip():
                 continue
